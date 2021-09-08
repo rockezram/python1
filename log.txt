@@ -1,0 +1,45 @@
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.0.35:81/ (Press CTRL+C to quit)
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.0.35:81/ (Press CTRL+C to quit)
+103.110.146.68 - - [08/Sep/2021 10:52:38] "GET / HTTP/1.1" 200 -
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "app.py", line 9, in <module>
+    app.run(host='0.0.0.0', port=81)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 922, in run
+    run_simple(t.cast(str, host), port, self, **options)
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/serving.py", line 1008, in run_simple
+    inner()
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/serving.py", line 948, in inner
+    srv = make_server(
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/serving.py", line 780, in make_server
+    return ThreadedWSGIServer(
+  File "/usr/local/lib/python3.8/dist-packages/werkzeug/serving.py", line 686, in __init__
+    super().__init__(server_address, handler)  # type: ignore
+  File "/usr/lib/python3.8/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.8/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.8/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+103.110.146.68 - - [08/Sep/2021 10:52:51] "GET / HTTP/1.1" 200 -
+103.110.146.68 - - [08/Sep/2021 10:52:53] "GET / HTTP/1.1" 200 -
+103.110.146.68 - - [08/Sep/2021 10:53:05] "GET / HTTP/1.1" 200 -
